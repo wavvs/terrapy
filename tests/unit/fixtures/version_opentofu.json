@@ -1,0 +1,6 @@
+{
+  "terraform_version": "1.7.2",
+  "platform": "windows_amd64",
+  "provider_selections": {},
+  "terraform_outdated": false
+}

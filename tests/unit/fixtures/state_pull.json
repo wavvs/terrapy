@@ -1,0 +1,40 @@
+{
+  "version": 4,
+  "terraform_version": "1.9.5",
+  "serial": 3,
+  "lineage": "11111111-2222-3333-4444-555555555555",
+  "outputs": {
+    "vpc_id": {"value": "vpc-0abc123", "type": "string"}
+  },
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "aws_instance",
+      "name": "web",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {"id": "i-0def456", "ami": "ami-123"},
+          "sensitive_attributes": [],
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_instance",
+      "name": "web",
+      "module": "module.pool",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {"id": "i-0aaa111"},
+          "dependencies": ["aws_vpc.main"]
+        }
+      ]
+    }
+  ]
+}
